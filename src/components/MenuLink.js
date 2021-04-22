@@ -4,13 +4,13 @@ import { NavLink } from "react-router-dom";
 function MenuLink(props) {
   return (
     
-      /*<NavLink
+      <NavLink
         activeStyle={{ "color": "#1780CC" }}
         to={props.dest}
       >
         {props.name}
-      </NavLink>*/
-      <h1>hi</h1>
+      </NavLink>
+      
     
   );
 }

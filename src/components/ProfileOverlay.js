@@ -1,6 +1,8 @@
 import React from "react";
 import "../sass/modal.scss";
 
+
+
 class ProfileOverlay extends React.Component {
   constructor(props) {
     super(props);
@@ -85,7 +87,7 @@ class ProfileOverlay extends React.Component {
               onClick={closeModal}
               onKeyDown={this.handleKeyDown}
             >
-              x
+              <i class="fa fa-times"></i>
             </a>
             {hasPrev && (
               <a
@@ -94,7 +96,7 @@ class ProfileOverlay extends React.Component {
                 onClick={findPrev}
                 onKeyDown={this.handleKeyDown}
               >
-                {"<"}
+                <i class="fa fa-chevron-left"></i>
               </a>
             )}
             {hasNext && (
@@ -104,7 +106,7 @@ class ProfileOverlay extends React.Component {
                 onClick={findNext}
                 onKeyDown={this.handleKeyDown}
               >
-                {">"}
+                <i class="fa fa-chevron-right"></i>
               </a>
             )}
           </div>

@@ -1,0 +1,37 @@
+#referenda-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .referendum-card {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #1780CC;
+    margin: 20px 10px;
+    white-space: pre-wrap;
+    max-width: 75%;
+  
+    @media (max-width:768px) {
+      max-width: 95%;
+    }
+  }
+  
+  .referendum-title {
+    font-family: 'Bitter', sans-serif;
+    // margin: -10px -10px -10px 0px;
+    background-color: #1780CC;
+    color: white;
+    font-size: 2em;
+    margin: 0px;
+    padding: 10px;
+  }
+  
+  .referendum-desc {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    margin: 2px 0;
+    padding: 10px;
+  }
+  

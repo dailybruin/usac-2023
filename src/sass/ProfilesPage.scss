@@ -1,0 +1,243 @@
+.endorsed_image {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 100;
+  }
+  .endorsed:before {
+    border-radius: 200px;
+    border: 3px solid #06ce00;
+    /*box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;*/
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 230px;
+    width: 230px;
+    margin-left: -118px;
+    margin-top: -118px;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+  }
+  .endorsed:hover:before {
+    transform: scale(1.05);
+  }
+  .break{
+    height:15px;
+  }
+  .endorsed.circle {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    border: none;
+    /*color: #e4ecfa;*/
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    position: relative;
+    margin: 25px 20px 0px 20px;
+    // box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 4px 0px;
+    transition: 0.5s;
+  }
+  .endorsed.circle:hover {
+    padding: -2px;
+  }
+  
+  .notEndorsed {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 100;
+  /*  font-family: "Segoe UI";
+    letter-spacing: 1px;*/
+  }
+  
+  .notEndorsed.red:before {
+    border: 3px solid red;
+  }
+  .notEndorsed:before {
+    border-radius: 200px;
+    border: 3px solid #1780CC;
+    /*box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;*/
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 230px;
+    width: 230px;
+    margin-left: -118px;
+    margin-top: -118px;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+  }
+  .notEndorsed:hover:before {
+    transform: scale(1.05);
+  }
+  .notEndorsed.circle {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    border: none;
+    /*color: #e4ecfa;*/
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    position: relative;
+    margin: auto;
+    margin-top: 25px;
+    transition: 0.5s;
+    margin: 25px 20px 0px 20px;
+    // box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 4px 0px;
+    transition: 0.5s;
+  }
+  .notEndorsed.circle:hover {
+    padding: -2px;
+  }
+  .candidate_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 10px 30px 10px;
+    min-height: 300px;
+    max-width: 240px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 4px 0px;
+    padding: 10px;
+    transition: all 0.3s ease;
+  
+    @media (max-width: 768px) {
+      margin: 0px 0px 1em 0px;
+    }
+  }
+  
+  .candidate_card:hover {
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.32);
+    z-index: 10;
+    opacity: 0.8;
+  }
+  
+  .candidate-info {
+    margin-top: auto;
+  }
+  
+  .positionRow{
+    height: auto;
+    border-color: gray;
+    margin-top: 35px;
+  }
+  .positionCandidates{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+  .positionName{
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Bitter', sans-serif;
+    font-size: 1.25em;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+  
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  .endorsedPositionName{
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Overpass Mono', sans-serif;
+    font-size: 1.25em;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 72px; // so "president" cards also take up 2 lines (lining up pics)
+  
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  
+  .candidateName{
+    margin: 1em 0em 0em 0em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+  }
+  .candidateSlate{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    color: gray;
+    text-align: center;
+  }
+  
+  .dropdown-width {
+    width: 100%;
+  }
+  
+  .bd-dropdown {
+    position: relative;
+    font-size: 1rem;
+    margin-top: 1em;
+    font-family: 'Open Sans', monospace;
+  }
+  .bd-dropdown.__active > .__control {
+    border: 0.1rem solid #1780CC;
+    border-radius: 0.2rem 0.2rem 0 0;
+    font-family: 'Open Sans', monospace;
+  }
+  .bd-dropdown .__control {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    border: 0.1rem solid #1780CC;
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    background-color: #fff;
+    color: #667d89;
+    cursor: pointer;
+  }
+  .bd-dropdown .__control .icon {
+    color: #97a8b0;
+  }
+  .bd-dropdown .__options {
+    position: absolute;
+    top: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 0.1rem solid #ccd4d8;
+    border-radius: 0 0 0.2rem 0.2rem;
+    border-top: none;
+    background-color: #fff;
+    z-index: 1;
+  }
+  .bd-dropdown .__options .__item {
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+  }
+  .bd-dropdown .__options .__item.__selected {
+    background-color: #e7e7e7;
+    cursor: default;
+  }
+  .bd-dropdown .__options .__item:hover {
+    background-color: #e7e7e7;
+  }

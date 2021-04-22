@@ -1,0 +1,211 @@
+.disable-scroll {
+    overflow: hidden;
+  }
+  
+  .modal {
+    position: fixed;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 20px;
+    z-index: 999;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: white;
+    min-width: 1000px;
+    overflow: visible;
+    box-shadow: 10px 2px 30px rgba(0, 0, 0, 0.15);
+  
+    @media (max-width: 768px) {
+      min-width: 0;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      height: 100%;
+      max-height: 100vh;
+      box-shadow: none;
+    }
+  }
+  
+  /*@media only screen and (max-width: 500px) {
+      .candidateOverlay{
+        display: block;
+        text-align: center;
+      }
+  }*/
+  
+  .modal img {
+    width: 40%;
+    min-width: 300px;
+    border: 5px solid #fff;
+    overflow: hidden;
+    top: 0%;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+  }
+  
+  .modal-controls a {
+    position: absolute;
+    display: inline;
+    color: #222;
+    text-decoration: none;
+    line-height: 36px;
+    font-size: 30px;
+    font-weight: lighter;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    overflow: visible;
+  }
+  
+  .modal-controls .modal-close {
+    right: 0;
+    top: 0;
+    margin: 0 8px;
+    border-radius: 0 0 0 5px;
+  
+    @media (max-width: 768px) {
+      margin: 0 10px;
+    }
+  }
+  
+  .modal-controls .modal-next,
+  .modal-controls .modal-prev {
+    right: 0;
+    top: calc(50% - 25px);
+    border-radius: 5px 0 0 5px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 40px;
+    margin: 0 2px;
+  }
+  
+  .modal-controls .modal-prev {
+    left: 0;
+    right: auto;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .modal-controls .modal-next {
+    @media (max-width: 768px) {
+      margin-right: 2px;
+    }
+  }
+  
+  /* Overlay styling */
+  
+  .candidateModalInfo {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 10px;
+    max-height: 72vh;
+  }
+  
+  .candidateModalImageContainer {
+    flex: 1;
+    max-width: 33%;
+  }
+  
+  .candidateModalImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .candidateOverlay {
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5px;
+  }
+  
+  /*
+  @media only screen and (max-device-width: 768px) {
+    .candidateOverlay {
+      display: block;
+    }
+    .candidateModalInfo {
+      justify-content: center;
+    }
+    .candidateName {
+      text-align: center;
+    }
+    .candidateSlate {
+      text-align: center;
+    }
+    .candidateOverlayPlatform {
+      text-align: center;
+      overflow-y: scroll;
+    }
+    .modal img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  */
+  
+  .candidateOverlayPlatform {
+    flex: 5;
+    max-width: 100%;
+    overflow-y: scroll;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .candidateOverlayName {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  
+  .candidateOverlaySlate {
+    font-family: "Open Sans", sans-serif;
+    color: gray;
+  }
+  
+  .candidateOverlaySlate.endorsedBar {
+    background-color: #06ce00;
+    color: white;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  
+  .candidateOverlaySlate.notEndorsedBar {
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    .candidateModalInfo {
+      display: inline-block;
+      max-height: 100vh;
+      overflow-y: scroll;
+    }
+  
+    .candidateOverlay {
+      text-align: center;
+      padding: 0 10px 25px;
+    }
+  
+    .candidateModalImageContainer {
+      max-width: 100%;
+    }
+  
+    .candidateOverlayPlatform {
+      overflow-y: visible;
+      text-align: left;
+    }
+  }

@@ -16,7 +16,7 @@ class EndorsementsPage extends React.Component {
 
   getCandidateInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -31,7 +31,9 @@ class EndorsementsPage extends React.Component {
           pos.candidates.map((candidate) => {
             if (
               candidate["endorsed"] == "Yes" ||
-              candidate["endorsed"] == "yes"
+              candidate["endorsed"] == "yes" ||
+              candidate["endorsed"] == "y" ||
+              candidate["endorsed"] == "Y"
             ) {
               // save candidates info for the position in object state only if the candidate is endorsed
               endorsedCandidates[pos.position] = candidate;
@@ -61,8 +63,8 @@ class EndorsementsPage extends React.Component {
         this.images = images;
         endorsedCandidates = endorsedCandidates.concat(nonendorsedCandidates);
         this.endorsedCandidates = endorsedCandidates;
-        let endorsedLive =
-          data.data["data.aml"].endorsements_live == "yes" ? true : false;
+        let endorsedLive = false;
+          //data.data["data.aml"].endorsements_live == "yes" ? true : false;
         this.setState({ loaded: true, endorsedLive: endorsedLive });
 
         this.closeModal = this.closeModal.bind(this);
@@ -139,7 +141,7 @@ class EndorsementsPage extends React.Component {
   }
 
   render() {
-    if (this.state.loaded && this.state.endorsedLive) {
+    if (false) { //this.state.loaded && this.state.endorsedLive) {
       return (
         <div>
           <div className="positionRow" key={0}>
@@ -221,10 +223,10 @@ class EndorsementsPage extends React.Component {
           </div> */}
         </div>
       );
-    } else if (this.state.loaded && !this.state.endorsedLive) {
+    } else /* if (this.state.loaded && !this.state.endorsedLive)*/ {
       return (
         <div>
-          <h2>Please check back Monday </h2>
+          <h2>Please check back Thursday </h2>
         </div>
       );
     } else {

@@ -133,7 +133,7 @@ class ProfilePage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -164,7 +164,8 @@ class ProfilePage extends React.Component {
             if (potentialImage) {
               imagesTemp.push(potentialImage);
             } else {
-              imagesTemp.push(null);
+              imagesTemp.push(candidate.image);
+              console.log(candidate.image);
             }
           });
         });
@@ -179,7 +180,8 @@ class ProfilePage extends React.Component {
             if (potentialImage) {
               candidate.image = potentialImage;
             } else {
-              candidate.image = null;
+              imagesTemp.push(candidate.image);
+              console.log(candidate.image);
             }
           });
         });
@@ -294,6 +296,7 @@ class ProfilePage extends React.Component {
               onClick={this.handleSelection}
             />
           </div>
+          <p style={{align: "center"}}>The following platforms are based on information provided by the Undergraduate Students Association Elections Board.</p>
           {this.printPositions()}
           {this.state.currentIndex !== null && (
             <ProfileOverlay

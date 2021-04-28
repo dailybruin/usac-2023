@@ -14,7 +14,7 @@ class SanctionsPage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -33,12 +33,12 @@ class SanctionsPage extends React.Component {
         });
         //Get images from Kerckhoff
         fetch(
-          "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.usac.violation/"
+          "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
         )
           .then((res) => res.json())
           .then((data) => {
             this.setState({
-              sanctionData: data.data["data.aml"].sanctions,
+              sanctionData: data.data["sanctions.aml"].sanctions,
               loaded: true,
               candidates: candidateData,
             });
@@ -73,11 +73,13 @@ class SanctionsPage extends React.Component {
     });
     // Group candidates by position
     return (
+      <>
+      <p>The violations are based on the Elections Board’s public notices of findings and contain information available as of April 28 at 3 p.m.</p>
       <div>
         <h2>RECENT SANCTIONS</h2>
         <SanctionsRecent sanctions={this.state.sanctionData} />
         {table}
-      </div>
+      </div> </>
     );
   }
 }

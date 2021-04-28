@@ -14,7 +14,7 @@ class ResultsPage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
     )
       .then((res) => res.json())
       .then((data) => {

@@ -13,7 +13,7 @@ class ReferendaPage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
     )
       .then(res => res.json())
       .then(data => {

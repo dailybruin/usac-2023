@@ -133,7 +133,7 @@ class ProfilePage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -160,7 +160,8 @@ class ProfilePage extends React.Component {
             if (potentialImage) {
               imagesTemp.push(potentialImage);
             } else {
-              imagesTemp.push(null);
+              imagesTemp.push(candidate.image);
+              console.log(candidate.image);
             }
           });
         });
@@ -175,7 +176,8 @@ class ProfilePage extends React.Component {
             if (potentialImage) {
               candidate.image = potentialImage;
             } else {
-              candidate.image = null;
+              imagesTemp.push(candidate.image);
+              console.log(candidate.image);
             }
           });
         });
@@ -278,7 +280,7 @@ class ProfilePage extends React.Component {
   }
 
   render() {
-    if (this.state.loaded) {
+    if (this.state.loaded && false) {
       return (
         <div>
           <div className="dropdown-width">
@@ -303,13 +305,19 @@ class ProfilePage extends React.Component {
           )}
         </div>
       );
-    } else {
+    } else { 
+      return (
+        <div>
+          <h2>Please check back Friday</h2>
+        </div>
+      );/*
       return (
         <div>
           <h2>Loading...</h2>
         </div>
-      );
+      ); */
     }
+    
   }
 }
 

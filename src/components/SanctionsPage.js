@@ -74,7 +74,7 @@ class SanctionsPage extends React.Component {
     // Group candidates by position
     return (
       <>
-      <p>The violations are based on the Elections Board’s public notices of findings and contain information available as of April 28 at 3 p.m.</p>
+      <p>The violations are based on the Elections Board’s public notices of findings and contain information available as of April 28 at 3 p.m. The time listed for each violation is when the Elections Board officials approved the respective violations.</p>
       <div>
         <h2>RECENT SANCTIONS</h2>
         <SanctionsRecent sanctions={this.state.sanctionData} />

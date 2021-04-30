@@ -166,6 +166,7 @@ class ProfilePage extends React.Component {
           });
         });
         let profilesImgReplace = data.data["data.aml"].profiles;
+        let endorsements = data.data["data.aml"].endorsements_live == "yes" ? true : false;
         let totalCount = 0;
         profilesImgReplace.forEach(function (position) {
           position.candidates.forEach(function (candidate) {
@@ -188,6 +189,7 @@ class ProfilePage extends React.Component {
           dropdownOptions: dropdownOptions,
           profiles: profilesImgReplace,
           totalCandidates: totalCount,
+          e_live: endorsements,
         });
       });
   }
@@ -280,7 +282,7 @@ class ProfilePage extends React.Component {
   }
 
   render() {
-    if (this.state.loaded && false) {
+    if (this.state.loaded && this.state.e_live) {
       return (
         <div>
           <div className="dropdown-width">

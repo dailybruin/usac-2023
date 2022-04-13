@@ -18,10 +18,19 @@
     }
   }
   
-  .referendum-title {
+  .referendum-title-endorsed {
     font-family: 'Bitter', sans-serif;
     // margin: -10px -10px -10px 0px;
-    background-color: #1780CC;
+    background-color: #06ce00;;
+    color: white;
+    font-size: 2em;
+    margin: 0px;
+    padding: 10px;
+  }
+  .referendum-title-not-endorsed {
+    font-family: 'Bitter', sans-serif;
+    // margin: -10px -10px -10px 0px;
+    background-color: red;
     color: white;
     font-size: 2em;
     margin: 0px;

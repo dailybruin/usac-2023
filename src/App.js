@@ -11,7 +11,7 @@ class App extends React.Component {
         <Navbar />
         <Main />
         <div className="footer content candidateSlate">
-          Page developed by Mattie Sanseverino. Copyright 2021 Daily Bruin.
+          Page developed by Mattie Sanseverino. Copyright 2022 Daily Bruin.
         </div>
       </div>
     );

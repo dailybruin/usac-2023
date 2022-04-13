@@ -15,7 +15,7 @@ class Main extends React.Component {
           <Route exact path="/" component={ProfilePage} />
           <Route path="/candidates" component={ProfilePage} />
           <Route path="/endorsements" component={EndorsementsPage} />
-          {/* <Route path="/results" component={ResultsPage} /> */}
+          <Route path="/results" component={ResultsPage} /> 
           <Route path="/violations" component={SanctionsPage} />
           <Route path="/referenda" component={ReferendaPage} />
           <Route path="/related" component={RelatedStories} />

@@ -17,10 +17,14 @@ const navItems = {
         name: "ENDORSEMENTS",
         link: "/endorsements",
       },
-      // {
-      //   name: "RESULTS",
-      //   link: "/results",
-      // },
+      {
+        name: "REFERENDA AND AMENDMENTS",
+        link: "/referenda",
+      },
+      {
+         name: "RESULTS",
+         link: "/results",
+     },
       {
         name: "RELATED",
         link: "/related",
@@ -37,7 +41,7 @@ class Navbar extends React.Component {
     );
     return (
       <nav>
-        <header>USAC Elections 2021</header>
+        <header>USAC Elections 2022</header>
         <ul className="links">{links}</ul>
       </nav>
     );

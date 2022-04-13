@@ -133,7 +133,7 @@ class ProfilePage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2022.usac-elections/"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -305,12 +305,34 @@ class ProfilePage extends React.Component {
               pageType="endorsements"
             />
           )}
+          <hr />
+          <h2 className="referendum-title-endorsed">
+            Endorsed - Constitutional Amendment 1
+          </h2>
+          <br></br>
+          <h2 className="referendum-title-endorsed">
+            Endorsed - Constitutional Amendment 2
+          </h2>
+          <br></br>
+          <h2 className="referendum-title-endorsed">
+            Endorsed - Constitutional Amendment 3
+          </h2>
+          <br></br>
+          <h2 className="referendum-title-endorsed">
+            Endorsed - Bruin Emergency Relief Fund Referendum
+          </h2>
+          <div className="candidateOverlayPlatform">
+          <p>Asking students to pitch in additional fees to an institution they’re already paying thousands of dollars for is a tall task. But for the prospective establishment of the Bruin Emergency Relief Fund – which will only support undergraduate students facing emergencies where financial assistance is required – the board believes it is a minor price to pay that will go a long way.</p>
+          <p>Under the language of the BERF referendum, student fees will increase by $2 each quarter starting fall 2021 to assist those experiencing emergency hardships, which, coming off a pandemic-adjusted school year, students should understand how helpful can be.</p>
+          <p>Considering students paid various amounts in fees over the course of this past remote school year for services they couldn’t even use, a fee that contributes directly to students in need should not be difficult to get behind.</p>
+          <p>And despite the possibly worrisome optics of a small increase in fees adding up to much more later, a general sense of empathy and commitment to their fellow Bruins should convince students that $2 a quarter is a worthwhile investment.</p>
+          </div> 
         </div>
       );
     } else { 
       return (
         <div>
-          <h2>Please check back Friday</h2>
+          <h2>Please check back later.</h2>
         </div>
       );/*
       return (

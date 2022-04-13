@@ -133,7 +133,7 @@ class ProfilePage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.usac.2021elections/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2022.usac-elections/"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -234,9 +234,9 @@ class ProfilePage extends React.Component {
   // TODO: onclick handler passes in whole candidate
   printCandidates(candidates, offset) {
     const candidateCards = candidates.map(function (candidate, index) {
-      let classcandidate = "notEndorsed";
-      if (candidate.endorsed == "Yes" || candidate.endorsed == "yes")
-        classcandidate = "endorsed";
+      let classcandidate = "blue_circle";
+      /*if (candidate.endorsed == "Yes" || candidate.endorsed == "yes")
+        classcandidate = "endorsed";*/
       let style = {
         backgroundImage: "url(" + candidate.image + ")",
       };

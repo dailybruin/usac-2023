@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     background-color: white;
-    min-width: 1000px;
+    min-width: 90%;
     overflow: visible;
     box-shadow: 10px 2px 30px rgba(0, 0, 0, 0.15);
   
@@ -115,7 +115,7 @@
   
   .candidateModalImageContainer {
     flex: 1;
-    max-width: 33%;
+    max-width: fit-content;
   }
   
   .candidateModalImage {

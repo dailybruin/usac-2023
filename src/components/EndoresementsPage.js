@@ -16,7 +16,7 @@ class EndorsementsPage extends React.Component {
 
   getCandidateInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2022.usac-elections/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/usac-2023"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -141,7 +141,7 @@ class EndorsementsPage extends React.Component {
   }
 
   render() {
-    if (true) { //this.state.loaded && this.state.endorsedLive) {
+    if (this.state.loaded && this.state.endorsedLive) {
       return (
         <div>
           <div className="positionRow" key={0}>
@@ -161,13 +161,72 @@ class EndorsementsPage extends React.Component {
               pageType="endorsements"
             />
           )}
-          
+          {/* <hr />
+          <h2 className="referendum-title">
+            Not Endorsed - International student representative referendum
+          </h2>
+          <div className="candidateOverlayPlatform">
+            <p>
+              International students face very real issues on campus. Creating
+              another position on the Undergraduate Students Association
+              Council, however, is merely a Band-Aid solution to the
+              council&rsquo;s shortcomings. For this reason, the board does not
+              endorse this referendum.{" "}
+            </p>
+            <p>
+              Advocates for the international student representative position
+              are right to point out that international students face increasing
+              struggles due to tightening immigration policies under President
+              Donald Trump&rsquo;s administration, lack of state financial aid
+              and the cultural shocks that come from studying at a university
+              thousands of miles from home.{" "}
+            </p>
+            <p>
+              But creating another position on the council fails to address a
+              fundamental issue: USAC&rsquo;s structure withholds it from truly
+              representing the many communities on this campus.{" "}
+            </p>
+            <p>
+              Instead of creating a new position for every community that has
+              unique struggles, council members and the student body must reform
+              USAC to be a senate-style system, which exists in many
+              universities such as UC Berkeley. A senate system with more
+              positions would allow individuals from different communities to be
+              elected and fight for the needs of the campus&rsquo; various
+              groups.
+            </p>
+            <p>
+              Certainly, an additional council position for international
+              students might help address some of the issues the community
+              faces. After all, international students are diverse and deserve
+              more attention, support and even representation in the
+              undergraduate student government.{" "}
+            </p>
+            <p>
+              But this referendum is not the way to ensure such representation
+              in the long term. In 2014, this campus was embroiled in the same
+              debate about whether USAC should add council positions for each
+              underrepresented campus community when it was faced with the
+              choice of whether to add a transfer student representative to the
+              council table. And the answer hasn&rsquo;t changed: The council
+              table in its current structure doesn&rsquo;t have enough room to
+              add a seat for every underrepresented community on campus.{" "}
+            </p>
+            <p>
+              To create a system that fairly represents the undergraduate
+              community, the student body must instead begin the long and
+              difficult journey of restructuring USAC into a senate-styled
+              system. Passing this referendum only pushes that burden onto
+              future Bruins while perpetuating the council&rsquo;s
+              inaccessibility to numerous groups on campus.{" "}
+            </p>
+          </div> */}
         </div>
       );
-    } else /* if (this.state.loaded && !this.state.endorsedLive)*/ {
+    } else if (this.state.loaded && !this.state.endorsedLive) {
       return (
         <div>
-          <h2>Please check back Thursday </h2>
+          <h2>Please check back Monday </h2>
         </div>
       );
     } else {
@@ -179,5 +238,6 @@ class EndorsementsPage extends React.Component {
     }
   }
 }
+
 
 export default EndorsementsPage;

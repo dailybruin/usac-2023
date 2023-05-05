@@ -9,7 +9,7 @@ class RelatedStories extends React.Component {
 
   componentDidMount() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2022.usac-elections/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/usac-2023"
     )
       .then((res) => res.json())
       .then((data) => {

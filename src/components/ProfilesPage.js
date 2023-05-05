@@ -133,7 +133,7 @@ class ProfilePage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/flatpage.2022.usac-elections/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/usac-2023"
     )
       .then((res) => res.json())
       .then((data) => {
